@@ -18,7 +18,9 @@ async def callback(code: str) -> dict:
         "code": code,
         "redirect_uri": os.environ.get("REDIRECT_URI")
     }
+    print(data)
     req = requests.post(url="https://api.intra.42.fr/oauth/token", data=data)
+    print(req.text)
     access_token = req.json().get("access_token")
 
     # Retrieve userdata
