@@ -27,7 +27,7 @@ async def callback(code: str) -> dict:
     }
     req = requests.get(url="https://api.intra.42.fr/v2/me", headers=headers)
 
-    return req.json()
+    return {"debug": os.environ.get("CLIENT_ID"), "data": req.json()}
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
