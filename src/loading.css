@@ -1,0 +1,47 @@
+.loadingbody {
+	background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading span {
+    display: inline-block;
+	margin-top: 20%;
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    animation: loading 1s 0s linear infinite;
+  }
+  
+  .loading span:nth-child(1) {
+    animation-delay: 0s;
+    background-color: #F6C34B;
+  }
+  
+  .loading span:nth-child(2) {
+    animation-delay: 0.2s;
+    background-color: #679D7D;
+  }
+  
+  .loading span:nth-child(3) {
+    animation-delay: 0.4s;
+    background-color: #5882A1;
+  }
+
+  .loading span:nth-child(4) {
+    animation-delay: 0.6s;
+    background-color: #AD4A45;
+  }
+@keyframes loading {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
